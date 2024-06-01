@@ -1,0 +1,171 @@
+IN MySQL the main cammands are 
+1.create
+2.drop
+3.use
+4.select
+
+1.create:
+
+syntax:
+CREATE DATABASE <name>;
+
+example:
+CREATE DATABASE student;
+
+2.drop:
+
+syntax:
+DROP DATABASE <name>;
+
+example:
+DROP DATABASE student;
+
+3.USE:
+
+syntax:
+USE <database name>;
+
+example:
+USE student;
+
+4.SELECT:
+
+Note: Without use command select is not run.
+
+syntax:
+SELECT DATABASE();
+
+example:
+SELECT DATABASE();
+
+Introduction to table:
+A database is just a bunch of tables that where is stored.
+Tables holds data.
+"A collection of related data hold in in a structured format within a database"
+
+Datatypes:
+
+Numeric :
+int
+decimal
+float double
+
+
+String:
+char
+varchar
+Enum
+
+Date type:
+Date
+datetime
+time
+year
+
+Creating table:
+
+Syntax:
+
+CREATE TABLE <tablename> (
+	column_name datatype,
+	column_name datatype
+	);
+
+Example:
+
+CREATE TABLE student (
+	rollno int,
+	name varchar(10)
+	);
+
+show tables;
+desc student;
+or
+show columns from cats;
+
+Droping table:
+
+Syntax: DROP TABLE <tablename>;
+
+example: DROP TABLE student;
+
+Inserting into table:
+Syntax:
+
+INSERT INTO tablname(rollno,name)
+VALUES(1,"vaishnavi");
+
+INSERT INTO tablname(rollno,name)
+VALUES(1,"vaishnavi")
+      (2,"Pramod")
+      (3,"mangal");
+
+for multiple insert:
+
+
+example:
+INSERT INTO student(rollno,name)
+VALUES(1,"vaishnavi");
+
+Note:
+(rollno,name) are Parameters and (1,"vaishnavi") are arguments.
+
+for viewing the data in tables we write as follows:
+
+SELECT * FROM student;
+SELECT rollno FROM student; (only rollno)
+SELECT name FROM student;   (only name)
+
+
+Not null:
+
+CREATE TABLE STUDENT2(
+name varchar(10) not null,
+rollno int not null
+);
+
+Note :
+when we defiend not null then we have to insert value in it.
+
+Default value:
+
+CREATE TABLE STUDENT2(
+name varchar(100) DEFAULT "no name provided",
+rollno int DEFAULT 12
+);
+
+INSERT INTO STUDENT2()
+VALUES();
+
+SELECT * From STUDENT2;
+
+
+Primary Key:
+
+CREATE TABLE STUDENT3(
+name varchar(100) not null,
+rollno int DEFAULT 12,
+PRIMARY KEY(rollno)
+);
+
+INSERT INTO STUDENT2(name,rollno)
+VALUES("Vaishnavi",1);
+
+desc STUDENT3;
+
+Auto Increment:
+
+ CREATE TABLE STUDENT5(
+    -> car_id int not null AUTO_INCREMENT,
+    -> name varchar(100) ,
+    -> age int,
+    -> PRIMARY KEY(car_id)
+    -> );
+
+ insert into STUDENT5(name,age)
+    -> values("vaishnavi",2);
+
+
+
+
+
